@@ -25,7 +25,7 @@ result = job.result()
 counts = result.get_counts(qc)
 
 
-# Display measurements (should be evenly split):
+# Display measurements (~512 each):
 print("Measurement results:", counts)
 plot_histogram(counts)
 plt.title("Superposition of a Qubit (H Gate)")
