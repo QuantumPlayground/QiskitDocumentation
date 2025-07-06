@@ -1,6 +1,6 @@
 
 # Qiskit Fundamentals
-# 1.4 Z-Gate
+# 1.7 Y-Gate
 
 
 from qiskit import QuantumCircuit
@@ -8,17 +8,17 @@ from qiskit_aer import Aer
 from qiskit.visualization import plot_histogram
 import matplotlib.pyplot as plt
 
-# The Z (Pauli) gate is a quantum gate that flips the phase of a qubit (z-axis rotation).
-# Z = | 1 0  |
-#     | 0 -1 |
+# The Y (Pauli) gate is a quantum gate that flips the phase as well as the state of a qubit (y-axis rotation).
+# T = | 0 -i |
+#     | i  0 |
 
 qc = QuantumCircuit(1, 1)
 
 # Start in |0⟩, H puts it in |+⟩:
 qc.h(0)
 
-# Z flips phase of |+⟩, state becomes |-⟩:
-qc.z(0)
+# Y flips phase and state of |+⟩, state becomes |-⟩:
+qc.y(0)
 
 # Final H, outcome is |1⟩:
 qc.h(0)
@@ -30,6 +30,6 @@ result = simulator.run(qc, shots=1024).result()
 counts = result.get_counts()
 
 
-print("Z Gate Result:", counts)
-plot_histogram(counts, title="Z Gate on |+⟩")
+print("Y Gate Result:", counts)
+plot_histogram(counts, title="Y Gate on |+⟩")
 plt.show()
