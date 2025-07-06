@@ -8,7 +8,9 @@ from qiskit_aer import Aer
 from qiskit.visualization import plot_histogram
 import matplotlib.pyplot as plt
 
-# The X gate is a quantum gate that flips the state of a qubit.
+# The X (Pauli) gate is a quantum gate that flips the state of a qubit.
+# X = | 0 1 |
+#     | 1 0 |
 
 qc = QuantumCircuit(1, 1)
 qc.x(0)
