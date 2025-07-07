@@ -8,7 +8,7 @@ from qiskit_aer import Aer
 from qiskit.visualization import plot_histogram
 import matplotlib.pyplot as plt
 
-# The CNOT (Controlled NOT) gate is a quantum gate that flips the state of a qubit based on the state of another qubit.
+# The CNOT (Controlled NOT, CX) gate is a quantum gate that flips the state of a qubit based on the state of another qubit.
 #        | 1 0 0 0 |
 # CNOT = | 0 1 0 0 |
 #        | 0 0 0 1 |
